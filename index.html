@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is an To do List</title>
+</head>
+<body>
+    
+<div>
+
+    <input type="text" name="text-field" id="txt">
+    <button onclick="addTask()">Add an item</button>
+
+    <ul id="Emptylist"></ul>
+
+</div>
+
+
+
+
+
+<script>
+
+
+function  addTask(){
+
+var txt = document.getElementById("txt").value;
+
+if (txt !== "") {
+
+    let Emptylist = document.getElementById('Emptylist');
+    let listItem = document.createElement("li");
+
+
+    listItem.appendChild(document.createTextNode(txt));
+    Emptylist.appendChild(listItem);
+
+    document.getElementById("txt").value = " ";
+
+}
+else {
+alert("Please enter a task!");
+
+}
+
+
+
+}
+
+
+
+</script>
+
+</body>
+</html>
